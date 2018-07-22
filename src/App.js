@@ -9,7 +9,7 @@ const cross_prefix = "https://cors-anywhere.herokuapp.com/";
 
 class App extends Component {
     state = {
-        recipes: []
+        recipes: null
     };
 
     //Handle the recipe search in the form
@@ -25,16 +25,26 @@ class App extends Component {
         const data = await response.json();
 
         this.setState({recipes: data.recipes});
+        console.log(this.state.recipes);
     };
 
     render() {
+        //Check for the recipes
+        let recipes;
+        if (this.state.recipes !== null) {
+            recipes = this.state.recipes.map((item, index) => {
+                return <p key={item.recipe_id}>{item.title}</p>
+            });
+        }
+
         return (
             <div className="App">
                 <header className="App-header">
                     <h1 className="App-title">Recipe Search</h1>
                 </header>
-
                 <Form getRecipe={this.getRecipe}/>
+
+                {recipes}
             </div>
         );
     }
