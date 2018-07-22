@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Form from './components/form';
+import Recipes from './components/recipes';
 
 //API key for doing API calls
 const API_KEY = "c59492c77da4bfb3944c2a38ee32ffea";
@@ -25,18 +26,9 @@ class App extends Component {
         const data = await response.json();
 
         this.setState({recipes: data.recipes});
-        console.log(this.state.recipes);
     };
 
     render() {
-        //Check for the recipes
-        let recipes;
-        if (this.state.recipes !== null) {
-            recipes = this.state.recipes.map((item, index) => {
-                return <p key={item.recipe_id}>{item.title}</p>
-            });
-        }
-
         return (
             <div className="App">
                 <header className="App-header">
@@ -44,7 +36,7 @@ class App extends Component {
                 </header>
                 <Form getRecipe={this.getRecipe}/>
 
-                {recipes}
+                <Recipes recipes={this.state.recipes}/>
             </div>
         );
     }
