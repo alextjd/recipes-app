@@ -1,10 +1,11 @@
 import React from 'react';
+import './styles.css';
 
 const Form = props => {
     return (
         <form onSubmit={props.getRecipe}>
-            <input type="text" name="recipeName"/>
-            <button>Search</button>
+            <input type="text" name="recipeName" className="form-input"/>
+            <button className="form-button">Search</button>
         </form>
     );
 };
