@@ -1,15 +1,16 @@
 import React from 'react';
+import './styles.css';
 
 const Recipes = props => {
     let recipes = null;
     if (props.recipes !== null) {
         recipes = props.recipes.map((item, index) => {
             return (
-                <div className="col-md-4 col-lg-4 recipe-item">
-                    <div key={item.recipe_id}>
-                        <img src={item.image_url} className="recipe-img"/>
-                        <div className="recipe-text">
-                            <h5>{item.title}</h5>
+                <div className="col-md-4" key={item.recipe_id}>
+                    <div className="recipe-item">
+                        <img src={item.image_url} alt="Some food" className="recipe-img"/>
+                        <div className="recipe-title">
+                            {item.title}
                         </div>
                     </div>
                 </div>
