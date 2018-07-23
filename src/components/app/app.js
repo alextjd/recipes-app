@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './App.css';
-import Form from './components/form';
-import Recipes from './components/recipes';
+import './app.css';
+import Form from '../form/index';
+import Recipes from '../recipes/index';
 
 //API key for doing API calls
 const API_KEY = "c59492c77da4bfb3944c2a38ee32ffea";
