@@ -18,10 +18,24 @@ a {
     text-align: center;
 }
 
-.app-title {
-    margin: 1rem 0 2.5rem;
+.app-header {
+    margin: 1.5em 0 3em;
 }
 
-input:-webkit-autofill {
-    /*-webkit-box-shadow: 0 0 0px 1000px #F2EFE9 inset;*/
+.app-title {
+    font-size: 5.5em;
+    font-family: 'Soleil', serif;
+    margin-bottom: 10px;
 }
+
+.app-subtitle {
+    font-size: 1em;
+    font-family: 'Noto Serif', serif;
+}
+
+/* Usage of custom font*/
+@font-face {
+    font-family: "Soleil";
+    src: url("../../fonts/Route_Du_Soleil.otf");
+}
+

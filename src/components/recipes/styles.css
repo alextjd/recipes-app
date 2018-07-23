@@ -2,12 +2,12 @@
 .recipe-item {
     color: #F2EFE9;
     margin: 12px 0;
-    padding: 1rem !important;
+    padding: 1rem 1rem 2rem 1rem!important;
     overflow: hidden;
     box-shadow: 4px 4px 11px 0 rgba(0,0,0,0.28);
     border-radius: 9px;
     text-align: left;
-    background: #904E55;
+    background: linear-gradient(#bc7178, #904E55);
 }
 
 .recipe-item .recipe-img {
@@ -23,14 +23,38 @@
 }
 
 .recipe-text .recipe-title {
-    font-size: 21px;
+    font-size: 2.7em;
+    font-family: 'Soleil', sans-serif;
+    line-height: 1.1em;
 }
 
 .recipe-text .recipe-author {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .recipe-author span {
     color: #cfccc7 !important;
     font-style: italic;
+}
+
+.recipe-text .detail-btn {
+    color: #F2EFE9;
+    background: transparent;
+    font-family: 'Soleil', serif;
+    border: solid 2px #F2EFE9;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 2.2rem;
+    line-height: 1.4em;
+    transition: 0.1s;
+}
+
+.recipe-text .detail-btn:hover {
+    color: #904E55;
+    background: #F2EFE9;
+    cursor: pointer;
+    transform: scale(1.1);
+    font-weight: bold;
+    box-shadow: 0px 14px 16px -7px rgba(0,0,0,0.29);
 }
