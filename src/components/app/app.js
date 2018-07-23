@@ -31,7 +31,10 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <h1 className="app-title">Recipe Search 1.0</h1>
+                <div className="app-header">
+                    <h1 className="app-title">Recipe finder</h1>
+                    <h3 className="app-subtitle">A simple web app to find creative and delicious recipes!</h3>
+                </div>
                 <Form getRecipe={this.getRecipe}/>
                 <Recipes recipes={this.state.recipes}/>
             </div>
