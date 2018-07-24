@@ -5,7 +5,12 @@ import './styles.css';
 
 const Recipes = props => {
     let recipes = null;
-    if (props.recipes !== null) {
+
+    if (props.recipes === null && !props.searching) {
+        recipes = <div className="logo">🎂🔍</div>
+    }
+
+    else if (props.recipes !== null) {
         //Look for searches with no result
         if (props.recipes.length === 0) {
             recipes = <div className="noresult">No results were found for that search :(</div>;
@@ -42,6 +47,7 @@ const Recipes = props => {
     else if (props.searching === true) {
         recipes = <div className="search-loader"></div>
     }
+
 
     return (
         <div className="container">

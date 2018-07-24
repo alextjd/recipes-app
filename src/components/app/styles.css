@@ -35,6 +35,13 @@ a {
     font-family: 'Noto Serif', serif;
 }
 
+/* Logo */
+.logo {
+    font-size: 7rem;
+    display: block;
+    margin: 3rem auto;
+}
+
 /* Usage of custom font*/
 @font-face {
     font-family: "Soleil";
