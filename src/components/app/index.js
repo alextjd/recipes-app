@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './app.css';
+import './styles.css';
 import Form from '../form/index';
 import Recipes from '../recipes/index';
 
@@ -10,13 +10,16 @@ const cross_prefix = "https://cors-anywhere.herokuapp.com/";
 
 class App extends Component {
     state = {
-        recipes: null
+        recipes: null,
+        searching: false
     };
 
     //Handle the recipe search in the form
     getRecipe = async (e) => {
         e.preventDefault();
 
+        //Start the loader
+        this.setState({recipes: null, searching: true});
         //Get the search term
         const recipe = e.target.elements.recipeName.value;
         //Prepare the url using literals
@@ -25,7 +28,7 @@ class App extends Component {
         const response = await fetch(url);
         const data = await response.json();
 
-        this.setState({recipes: data.recipes});
+        this.setState({recipes: data.recipes, searching: false});
     };
 
     render() {
@@ -36,7 +39,7 @@ class App extends Component {
                     <h3 className="app-subtitle">A simple web app to find creative and delicious recipes!</h3>
                 </div>
                 <Form getRecipe={this.getRecipe}/>
-                <Recipes recipes={this.state.recipes}/>
+                <Recipes recipes={this.state.recipes} searching={this.state.searching}/>
             </div>
         );
     }
