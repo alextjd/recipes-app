@@ -10,13 +10,15 @@ const Recipes = props => {
         }
         else {
             recipes = props.recipes.map((item, index) => {
+                //Shorten recipe title
+                let title = item.title.length < 20 ? item.title : item.title.substring(0, 20) + "...";
                 return (
                     <div className="col-md-4 col-lg-4" key={item.recipe_id}>
                         <div className="recipe-item">
                             <img src={item.image_url} alt="Some food" className="recipe-img"/>
                             <div className="recipe-text">
                                 <div className="recipe-title">
-                                    {item.title}
+                                    {title}
                                 </div>
                                 <div className="recipe-author">
                                     Created by: <span>{item.publisher}</span>
