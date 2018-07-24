@@ -37,7 +37,7 @@
     font-style: italic;
 }
 
-.recipe-text .detail-btn {
+.detail-btn {
     color: #F2EFE9;
     background: transparent;
     font-family: 'Soleil', serif;
@@ -50,7 +50,7 @@
     transition: 0.1s;
 }
 
-.recipe-text .detail-btn:hover {
+.detail-btn:hover {
     color: #904E55;
     background: #F2EFE9;
     cursor: pointer;

@@ -25,4 +25,48 @@
 .detail-title {
     font-family: Soleil, serif;
     font-size: 73px;
+    line-height: 1em;
+    margin: 17px 0 5px;
 }
+
+.detail-author {
+    margin-bottom: 4px;
+ }
+
+.detail-container span {
+    font-family: Soleil, serif;
+    font-size: 32px;
+    line-height: 1em;
+}
+
+.detail-container p, .detail-website a {
+    padding-left: 30px;
+    margin-bottom: 7px !important;
+    font-size: 24px;
+}
+
+.detail-website a {
+    cursor: pointer;
+    color: #c26b73 !important;
+}
+
+.detail-website a:hover {
+    color: #e17e88 !important;
+}
+
+.btn-wrapper {
+    text-align: center;
+}
+
+.detail-container .detail-btn {
+    background: #904E55;
+    color: #F2EFE9;
+    border: none;
+    width: 60%;
+}
+
+.detail-container .detail-btn:hover {
+    font-weight: normal !important;
+}
+
+
