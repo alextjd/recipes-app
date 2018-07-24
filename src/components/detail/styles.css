@@ -1,0 +1,28 @@
+.detail-container {
+    width: 45%;
+    min-width: 300px;
+    display: block;
+    margin: 2rem auto;
+}
+
+.detail-img {
+    background: linear-gradient(#bc7178, #904E55);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 14px 16px -7px rgba(0,0,0,0.4);
+}
+
+.detail-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    border: solid 2px #F2EFE9;
+}
+
+.detail-title {
+    font-family: Soleil, serif;
+    font-size: 73px;
+}
