@@ -18,9 +18,13 @@ class Detail extends Component {
                 <div className="detail-author"><span>Recipe created by:</span><br/>
                     <p>{this.state.activeRecipe.publisher}</p></div>
                 <div className="detail-website">
-                    <span>Check the original recipe:</span><br/><a>{this.state.activeRecipe.publisher_url}</a></div>
+                    <span>Check the original recipe:</span><br/>
+                    <a href={this.state.activeRecipe.publisher_url}>{this.state.activeRecipe.publisher_url}</a>
+                </div>
                 <div className="btn-wrapper">
-                    <Link to="/"><button className="detail-btn">Go back</button></Link>
+                    <Link to="/">
+                        <button className="detail-btn">Go back</button>
+                    </Link>
                 </div>
             </div>
         );
