@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from "./components/app/index";
+import Router from './components/router/index';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Router />, document.getElementById('root'));
