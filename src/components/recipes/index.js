@@ -19,16 +19,16 @@ const Recipes = props => {
                         <div className="recipe-item">
                             <img src={item.image_url} alt="Some food" className="recipe-img"/>
                             <div className="recipe-text">
-                                /*Recipe title*/
+                                {/*Recipe title*/}
                                 <div className="recipe-title">
                                     {title}
                                 </div>
-                                /*Recipe author*/
+                                {/*Recipe author*/}
                                 <div className="recipe-author">
                                     Created by: <span>{item.publisher}</span>
                                 </div>
-                                /*Recipe detail button*/
-                                <Link to={`/recipe/${item.recipe_id}`}>
+                                {/*Recipe detail button*/}
+                                <Link to={{pathname: `/recipe/${item.recipe_id}`, state: item}}>
                                     <button className="detail-btn">View recipe</button>
                                 </Link>
                             </div>
